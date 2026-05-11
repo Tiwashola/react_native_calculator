@@ -1,50 +1,59 @@
-# Welcome to your Expo app 👋
+# React Native Calculator
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A clean, iOS-style calculator built with React Native and Expo. Supports basic arithmetic operations with a polished dark UI.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Addition, subtraction, multiplication, division
+- Percentage and sign toggle (+/−)
+- Decimal point support
+- Live expression display
+- Active operator highlight
+- Error handling (e.g. division by zero)
 
-   ```bash
-   npm install
-   ```
+## Prerequisites
 
-2. Start the app
+- Node.js ≥ 18
+- Expo Go app on your phone ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent) / [iOS](https://apps.apple.com/app/expo-go/id982107779))
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Getting Started
 
 ```bash
-npm run reset-project
+npx create-expo-app CalculatorApp
+cd CalculatorApp
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Replace `app/(tabs)/index.tsx` with the `App.jsx` file from this repo, then:
 
-## Learn more
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+Scan the QR code with Expo Go to run on your phone.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+> **Tip:** If you get an "internet connection offline" error on Expo Go, press `t` in the terminal to switch to tunnel mode, then rescan the QR code.
 
-## Join the community
+## Project Structure
 
-Join our community of developers creating universal apps.
+```
+CalculatorApp/
+├── app/
+│   ├── (tabs)/
+│   │   └── index.tsx      # Main calculator screen (App.jsx goes here)
+│   └── _layout.tsx
+├── assets/
+├── app.json
+├── package.json
+└── README.md
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Pushing to GitHub
+
+```bash
+git init
+git add .
+git commit -m "Initial commit: React Native calculator"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/rn-calculator.git
+git push -u origin main
+```
